@@ -1,0 +1,543 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Women's Handbags",
+    "slug": "womens-handbags",
+    "description": "Elegant, versatile handbags crafted for everyday sophistication — from work totes to evening clutches.",
+    "image": "",
+    "is_active": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Traveling bags",
+    "slug": "traveling-bags",
+    "description": "Soft-structured, for short trips",
+    "image": "",
+    "is_active": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "School bags",
+    "slug": "school-bags",
+    "description": "Durable and spacious, perfect for school, books, and everyday essentials.",
+    "image": "",
+    "is_active": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Classic Leather Tote",
+    "slug": "classic-leather-tote",
+    "description": "A timeless tote crafted from premium leather, designed to carry everything you need without compromising on style. Spacious interior, reinforced handles, and a structured silhouette that pairs effortlessly with any outfit.",
+    "price": "45000.00",
+    "compare_at_price": null,
+    "stock": 5,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-16T13:20:32.868Z",
+    "updated_at": "2026-09-17T12:17:45.840Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "category": 3,
+    "name": "Classic School Backpack",
+    "slug": "classic-school-backpack",
+    "description": "Durable and spacious, designed to carry books, notebooks, and everyday essentials.",
+    "price": "12000.00",
+    "compare_at_price": null,
+    "stock": 4,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T07:41:48.064Z",
+    "updated_at": "2026-09-17T12:17:31.272Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "name": "Classic Travel Bag",
+    "slug": "classic-travel-bag",
+    "description": "Durable and easy-to-carry design",
+    "price": "15000.00",
+    "compare_at_price": null,
+    "stock": 6,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T07:51:07.183Z",
+    "updated_at": "2026-09-17T12:17:08.356Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "category": 2,
+    "name": "TravelPro bag",
+    "slug": "travelpro-bag",
+    "description": "Spacious main compartment",
+    "price": "18000.00",
+    "compare_at_price": null,
+    "stock": 7,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T07:53:15.110Z",
+    "updated_at": "2026-09-17T12:16:50.483Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Premium Ladies Bag",
+    "slug": "premium-ladies-bag",
+    "description": "High-quality design made for comfort and style",
+    "price": "30000.00",
+    "compare_at_price": null,
+    "stock": 5,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:02:28.692Z",
+    "updated_at": "2026-09-17T12:16:33.130Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "category": 3,
+    "name": "Basic Kids School bag",
+    "slug": "basic-kids-school-bag",
+    "description": "Basic Kids school bag",
+    "price": "14000.00",
+    "compare_at_price": null,
+    "stock": 10,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:04:49.759Z",
+    "updated_at": "2026-09-17T12:16:09.695Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "category": 3,
+    "name": "Standard primary school backpack",
+    "slug": "standard-primary-school-backpack",
+    "description": "A blue Standard primary school backpack",
+    "price": "13000.00",
+    "compare_at_price": null,
+    "stock": 1,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:12:39.759Z",
+    "updated_at": "2026-09-17T12:15:49.584Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "name": "Voyager Travel Bag",
+    "slug": "voyager-travel-bag",
+    "description": "Designed to hold your clothes, shoes and toiletries and other essentials",
+    "price": "20000.00",
+    "compare_at_price": null,
+    "stock": 1,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:16:11.455Z",
+    "updated_at": "2026-09-17T12:15:08.198Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "name": "Expandable Luggage",
+    "slug": "expandable-luggage",
+    "description": "A black brown expandable bag",
+    "price": "18000.00",
+    "compare_at_price": null,
+    "stock": 1,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:24:30.529Z",
+    "updated_at": "2026-09-17T11:49:16.408Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "name": "Pearl Handbag",
+    "slug": "pearl-handbag",
+    "description": "Elegant, high-quality, and designed for a classy everyday look",
+    "price": "25000.00",
+    "compare_at_price": null,
+    "stock": 1,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:34:08.571Z",
+    "updated_at": "2026-09-17T12:14:06.428Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "category": 3,
+    "name": "Prime school bag",
+    "slug": "prime-school-bag",
+    "description": "High quality, durable, and spacious enough for everyday school esesntials",
+    "price": "18000.00",
+    "compare_at_price": null,
+    "stock": 1,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:47:39.401Z",
+    "updated_at": "2026-09-17T11:57:31.287Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "category": 1,
+    "name": "Grace Handbag",
+    "slug": "grace-handbag",
+    "description": "simple, classy, and ideal for everyday outfits",
+    "price": "35000.00",
+    "compare_at_price": null,
+    "stock": 1,
+    "is_active": true,
+    "is_featured": true,
+    "meta_description": "",
+    "created_at": "2026-09-17T08:50:00.393Z",
+    "updated_at": "2026-09-17T11:47:11.374Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "image": "media/products/2aa745d017891f6a5e11949910ad13c6_fxsysv",
+    "alt_text": "Classic Leather Tote bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "image": "media/products/cae4925c1f80650c0adff33f7196574c_aoouev",
+    "alt_text": "Classic School Backpack",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 3,
+  "fields": {
+    "product": 3,
+    "image": "media/products/cd170e742748725e4ed61223644ed71d_ijbugo",
+    "alt_text": "Classic Travel Bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 4,
+  "fields": {
+    "product": 4,
+    "image": "media/products/98dde51366392742513a71d38f0080d4_1_uikb80",
+    "alt_text": "TravelPro Bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 5,
+  "fields": {
+    "product": 5,
+    "image": "media/products/531de20d280a168a0fd39cb3e9bca3a3_awdes9",
+    "alt_text": "Premium Ladies Bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 6,
+  "fields": {
+    "product": 6,
+    "image": "media/products/d4c19e9c6627185cbd807f9a5d15ed13_gkjoj5",
+    "alt_text": "Basic Kids School bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 7,
+  "fields": {
+    "product": 7,
+    "image": "media/products/7f4743874e9f203d4d147a1c9decca28_u07ig9",
+    "alt_text": "Standard primary school backpack",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 8,
+    "image": "media/products/07cd430116c8a092b1b540ddd8a36cd4_zdk7ue",
+    "alt_text": "Voyager Travel Bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 9,
+    "image": "media/products/70dce98dbb66ffe46e6b86c9da3861f3_gvysrn",
+    "alt_text": "Expandable Luggage",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 10,
+    "image": "media/products/9dbb9ecb9af4f8af1f031cefac40ab2b_q1xya3",
+    "alt_text": "Pearl Handbag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 11,
+    "image": "media/products/9e1e89d0b86bac8b4051b87bc2a35624_ej7n6s",
+    "alt_text": "Prime school bag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 12,
+    "image": "media/products/1e11ca8b4ac05e984d313acb55f211df_tpp6n8",
+    "alt_text": "Grace Handbag",
+    "is_primary": true,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 10,
+    "image": "media/products/6f064734dc97588f349c8cf11ccc9c75_wnvxfx",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 9,
+    "image": "media/products/70dce98dbb66ffe46e6b86c9da3861f3_jtymv2",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 8,
+    "image": "media/products/07cd430116c8a092b1b540ddd8a36cd4_ca0gjf",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 6,
+    "image": "media/products/d4c19e9c6627185cbd807f9a5d15ed13_u4eqsw",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 7,
+    "image": "media/products/7f4743874e9f203d4d147a1c9decca28_xrwav6",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 5,
+    "image": "media/products/4d1ef79f001222e577f759f9c933d2a1_nxdcjg",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 19,
+  "fields": {
+    "product": 4,
+    "image": "media/products/98dde51366392742513a71d38f0080d4_1_kzafgu",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 20,
+  "fields": {
+    "product": 3,
+    "image": "media/products/cd170e742748725e4ed61223644ed71d_g0pg8b",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 21,
+  "fields": {
+    "product": 2,
+    "image": "media/products/cae4925c1f80650c0adff33f7196574c_jinz3g",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 22,
+  "fields": {
+    "product": 10,
+    "image": "media/products/9dbb9ecb9af4f8af1f031cefac40ab2b_dkbcki",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 23,
+  "fields": {
+    "product": 8,
+    "image": "media/products/07cd430116c8a092b1b540ddd8a36cd4_vwcyhs",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 24,
+  "fields": {
+    "product": 11,
+    "image": "media/products/07f9f71e92aab94fc2f91e2ea49eb614_ds5c0u",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 25,
+  "fields": {
+    "product": 10,
+    "image": "media/products/9dbb9ecb9af4f8af1f031cefac40ab2b_mrpynd",
+    "alt_text": "",
+    "is_primary": false,
+    "order": 0
+  }
+},
+{
+  "model": "accounts.address",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "full_name": "iretiayomide samuel",
+    "phone_number": "09136166358",
+    "address_line": "21,iyana iyesi road ota,ogun state",
+    "city": "ogun",
+    "state": "ogun",
+    "is_default": false,
+    "created_at": "2026-09-16T22:11:45.544Z"
+  }
+}
+]

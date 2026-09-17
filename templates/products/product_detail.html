@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }} | Jubilee Fashion Home{% endblock %}
+{% block meta %}
+<meta property="og:title" content="{{ product.name }} | Jubilee Fashion Home">
+<meta property="og:description" content="{{ product.description|truncatewords:25 }}">
+{% with primary_image=product.images.first %}
+{% if primary_image %}
+<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ primary_image.image.url }}">
+{% endif %}
+{% endwith %}
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:type" content="product">
+<meta name="description" content="{{ product.description|truncatewords:25 }}">
+{% endblock %}
+
+{% block content %}
+<div class="product-detail-page">
+
+  <div class="product-detail-gallery">
+    {% with primary_image=product.images.first %}
+      {% if primary_image %}
+      <img src="{{ primary_image.image.url }}" alt="{{ primary_image.alt_text|default:product.name }}" class="product-detail-main-img">
+      {% endif %}
+    {% endwith %}
+
+    {% if product.images.count > 1 %}
+    <div class="product-detail-thumbs">
+      {% for img in product.images.all %}
+      <img src="{{ img.image.url }}" alt="{{ img.alt_text|default:product.name }}">
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="product-detail-info">
+    <p class="product-detail-category">{{ product.category.name }}</p>
+    <h1>{{ product.name }}</h1>
+
+    <p class="product-detail-price">
+      ₦{{ product.price }}
+      {% if product.is_on_sale %}
+        <span class="compare-price">₦{{ product.compare_at_price }}</span>
+      {% endif %}
+    </p>
+
+    {% if product.in_stock %}
+      <p class="stock-badge stock-available">In Stock</p>
+    {% else %}
+      <p class="stock-badge stock-unavailable">Out of Stock</p>
+    {% endif %}
+
+    <p class="product-detail-desc">{{ product.description }}</p>
+
+    {% if product.has_variants %}
+    <div class="filter-group">
+      <label for="variant">Select Option</label>
+      <select name="variant" id="variant">
+        {% for variant in product.variants.all %}
+        <option value="{{ variant.id }}" {% if variant.stock == 0 %}disabled{% endif %}>
+          {{ variant.name }} {% if variant.stock == 0 %}(Out of stock){% endif %}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
+
+        {% if product.in_stock %}
+    <form method="post" action="{% url 'cart_add' product.id %}">
+      {% csrf_token %}
+      <input type="hidden" name="quantity" value="1">
+      <button type="submit" class="btn-gold btn-full">Add to Cart</button>
+    </form>
+    {% else %}
+    <button class="btn-gold btn-full" disabled>Out of Stock</button>
+    {% endif %}
+
+        <a href="{% url 'wishlist_add' product.id %}" class="btn-outline btn-full">Add to Wishlist</a>
+  </div>
+</div>
+
+{% if related_products %}
+<section class="category-section">
+  <div class="category-heading">
+    <h2>You May Also Like</h2>
+  </div>
+  <div class="product-grid">
+    {% for rp in related_products %}
+    <a href="{% url 'product_detail' rp.slug %}" class="product-card-link">
+      <div class="product-card">
+        {% with primary_image=rp.images.first %}
+          {% if primary_image %}
+          <img src="{{ primary_image.image.url }}" alt="{{ primary_image.alt_text|default:rp.name }}">
+          {% endif %}
+        {% endwith %}
+        <div class="product-card-body">
+          <h3>{{ rp.name }}</h3>
+          <p class="product-price">₦{{ rp.price }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+<section class="category-section">
+  <div class="category-heading">
+    <h2>Customer Reviews</h2>
+    {% if product.reviews_count %}
+    <p>{{ product.average_rating }} / 5 ({{ product.reviews_count }} review{{ product.reviews_count|pluralize }})</p>
+    {% else %}
+    <p>No reviews yet — be the first to review this product.</p>
+    {% endif %}
+  </div>
+
+  <div class="reviews-list">
+    {% for review in reviews %}
+    <div class="review-item">
+      <p class="review-rating">{{ review.rating }} / 5 ★</p>
+      <p class="review-author">{{ review.customer.username }} — {{ review.created_at|date:"M d, Y" }}</p>
+      {% if review.comment %}<p class="review-comment">{{ review.comment }}</p>{% endif %}
+    </div>
+    {% empty %}
+    <p></p>
+    {% endfor %}
+  </div>
+
+  {% if request.user.is_authenticated %}
+    {% if not user_has_reviewed %}
+    <div class="content-card" style="max-width: 500px;">
+      <h2>Write a Review</h2>
+      <form method="post" action="{% url 'submit_review' product.id %}">
+        {% csrf_token %}
+        {{ review_form.as_p }}
+        <button type="submit" class="btn-gold btn-full">Submit Review</button>
+      </form>
+    </div>
+    {% else %}
+    <p>You've already reviewed this product.</p>
+    {% endif %}
+  {% else %}
+    <p><a href="{% url 'login' %}">Login</a> to leave a review.</p>
+  {% endif %}
+</section>
+{% endblock %}

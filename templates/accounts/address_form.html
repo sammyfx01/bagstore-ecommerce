@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <h1>Add Address</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn-gold btn-full">Save Address</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

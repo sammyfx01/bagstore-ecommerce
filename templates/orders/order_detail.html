@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Order #{{ order.id }}</h1>
+</div>
+
+<div class="content-card">
+  <h2>Order Status</h2>
+  <p><strong>{{ order.get_status_display }}</strong></p>
+  <p>Payment: {{ order.get_payment_status_display }}</p>
+</div>
+
+<div class="content-card">
+  <h2>Delivery Details</h2>
+  <p>{{ order.full_name }}</p>
+  <p>{{ order.address_line }}, {{ order.city }}, {{ order.state }}</p>
+  <p>{{ order.phone_number }}</p>
+</div>
+
+<div class="content-card">
+  <h2>Items</h2>
+  {% for item in order.items.all %}
+  <div class="checkout-item">
+    <span>{{ item.quantity }} × {{ item.product.name }}</span>
+    <span>₦{{ item.subtotal }}</span>
+  </div>
+  {% endfor %}
+  <div class="checkout-item" style="font-weight: 700; margin-top: 12px;">
+    <span>Total</span>
+    <span>₦{{ order.total }}</span>
+  </div>
+</div>
+{% endblock %}

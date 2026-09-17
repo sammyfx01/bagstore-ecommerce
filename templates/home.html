@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<meta name="description" content="Jubilee Fashion Home — premium handbags, travel bags, school bags and more. Shop quality bags crafted for every journey.">
+<meta property="og:title" content="Jubilee Fashion Home">
+<meta property="og:description" content="Premium bags, timeless style. Shop our full collection.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+{% endblock %}
+
+{% block content %}
+
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Jubilee Fashion Home</span>
+    <h1>Premium Bags, Timeless Style</h1>
+    <p>Discover handcrafted handbags, travel bags, and accessories made for every journey.</p>
+       <a href="{% url 'product_list' %}" class="btn-gold">Shop Now</a>
+  </div>
+</section>
+
+{% if categories %}
+<section class="category-section">
+  <div class="category-heading">
+    <h2>Shop by Category</h2>
+    <p>Explore our curated collection, organized just for you.</p>
+  </div>
+  <div class="category-grid">
+    {% for category in categories %}
+        <a href="{% url 'product_list' %}?category={{ category.slug }}" class="category-card">
+      {% if category.image %}
+      <div class="category-card-media">
+        <img src="{{ category.image.url }}" alt="{{ category.name }}">
+      </div>
+      {% endif %}
+      <h3>{{ category.name }}</h3>
+      <p>{{ category.description|truncatewords:15 }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if featured_products %}
+<section class="category-section">
+  <div class="category-heading">
+    <h2>Featured Products</h2>
+    <p>Our most loved pieces, handpicked for you.</p>
+  </div>
+  <div class="product-grid">
+    {% for product in featured_products %}
+          <a href="{% url 'product_detail' product.slug %}" class="product-card-link">
+        <div class="product-card">
+          {% with primary_image=product.images.first %}
+            {% if primary_image %}
+            <img src="{{ primary_image.image.url }}" alt="{{ primary_image.alt_text|default:product.name }}">
+            {% endif %}
+          {% endwith %}
+          <div class="product-card-body">
+            <h3>{{ product.name }}</h3>
+            <p class="product-price">
+              ₦{{ product.price }}
+              {% if product.is_on_sale %}
+                <span class="compare-price">₦{{ product.compare_at_price }}</span>
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

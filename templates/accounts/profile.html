@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+  <h1>My Account</h1>
+</div>
+
+<div class="content-card">
+  <h2>Profile Details</h2>
+  <p>Username: {{ request.user.username }}</p>
+  <p>Name: {{ request.user.first_name }} {{ request.user.last_name }}</p>
+  <p>Email: {{ request.user.email }}</p>
+</div>
+
+<div class="content-card">
+  <h2>Saved Addresses</h2>
+  {% for address in addresses %}
+  <div class="address-item">
+    <p><strong>{{ address.full_name }}</strong> {% if address.is_default %}<span class="badge-default">Default</span>{% endif %}</p>
+    <p>{{ address.address_line }}, {{ address.city }}, {{ address.state }}</p>
+    <p>{{ address.phone_number }}</p>
+    <form method="post" action="{% url 'address_delete' address.pk %}">
+      {% csrf_token %}
+      <button type="submit" class="btn-remove">Remove</button>
+    </form>
+  </div>
+  {% empty %}
+  <p>No saved addresses yet.</p>
+  {% endfor %}
+  <a href="{% url 'address_add' %}" class="btn-outline">Add New Address</a>
+</div>
+{% endblock %}
