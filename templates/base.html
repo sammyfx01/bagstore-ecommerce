@@ -58,13 +58,17 @@
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand">
-                <a href="{% url 'home' %}">
-          <img src="{% static 'images/logo.png' %}" alt="Jubilee Fashion Home" class="logo-img" style="height: 60px;">
+        <a href="{% url 'home' %}" aria-label="Jubilee Fashion Home home page">
+          <img src="{% static 'images/logo.png' %}" alt="Jubilee Fashion Home" class="logo-img">
         </a>
         <p>Premium bags, crafted for every journey.</p>
+        <div class="footer-badges">
+          <span>Luxury Style</span>
+          <span>Fast Delivery</span>
+        </div>
       </div>
 
-            <div class="footer-section">
+      <div class="footer-section">
         <h3>Shop</h3>
         <a href="{% url 'product_list' %}">All Products</a>
         <a href="{% url 'home' %}">Home</a>
@@ -74,9 +78,9 @@
       <div class="footer-section">
         <h3>Connect</h3>
         <a href="https://wa.me/2347035047445" target="_blank" rel="noopener">WhatsApp Us</a>
-                <a href="https://instagram.com/jubileefashionhome_1" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://instagram.com/jubileefashionhome_1" target="_blank" rel="noopener">Instagram</a>
         <a href="https://tiktok.com/@jubileefashionbags" target="_blank" rel="noopener">TikTok</a>
-                <p style="margin-top: 10px; color: rgba(250,246,239,0.75); font-size: 0.9rem;">No 28 Baruwa Junction, opposite Iyana bus stop, Otta, Ogun State.</p> 
+        <p>No 28 Baruwa Junction, opposite Iyana bus stop, Otta, Ogun State.</p>
       </div>
     </div>
 

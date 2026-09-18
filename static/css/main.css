@@ -731,27 +731,48 @@ button:disabled {
 
 /* ===== Footer ===== */
 .site-footer {
-  background: linear-gradient(180deg, var(--brown) 0%, #2f1d13 100%);
+  background: linear-gradient(180deg, #2b1b14 0%, #1f120d 100%);
   color: var(--cream);
-  padding: 30px 24px 18px;
+  padding: 34px 24px 18px;
   margin-top: 40px;
+  border-top: 1px solid rgba(212, 165, 55, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.site-footer::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 0 auto 22px;
+  border-radius: 999px;
 }
 
 .footer-top {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(220px, 1.6fr) minmax(160px, 1fr) minmax(220px, 1.4fr);
-  gap: 24px 32px;
-  align-items: start;
+  grid-template-columns: 1.5fr 1fr 1.3fr;
+  gap: 22px;
+  align-items: stretch;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(250, 246, 239, 0.15);
+}
+
+.footer-brand,
+.footer-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(250, 246, 239, 0.08);
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 
 .footer-brand a {
@@ -764,56 +785,85 @@ button:disabled {
 }
 
 .footer-brand .logo-img {
-  height: 52px;
+  height: 56px;
   width: auto;
+  filter: drop-shadow(0 8px 14px rgba(0,0,0,0.18));
 }
 
 .footer-brand p {
-  color: rgba(250, 246, 239, 0.75);
+  color: rgba(250, 246, 239, 0.76);
   margin: 0;
-  max-width: 260px;
-  line-height: 1.6;
+  max-width: 280px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.footer-badges span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 165, 55, 0.4);
+  background: rgba(184, 134, 11, 0.08);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .footer-section h3 {
   color: var(--cream);
-  font-size: 0.87rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 4px;
+  letter-spacing: 0.12em;
+  margin: 0 0 6px;
 }
 
 .footer-section a {
-  display: inline-block;
-  color: rgba(250, 246, 239, 0.85);
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  color: rgba(250, 246, 239, 0.8);
+  font-size: 0.92rem;
   line-height: 1.5;
-  margin: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-section a:hover {
   color: var(--gold-light);
+  transform: translateX(2px);
 }
 
 .footer-section p {
-  color: rgba(250, 246, 239, 0.75);
+  color: rgba(250, 246, 239, 0.72);
   margin: 0;
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .footer-bottom {
   max-width: 1100px;
   margin: 16px auto 0;
   text-align: center;
-  color: rgba(250, 246, 239, 0.65);
+  color: rgba(250, 246, 239, 0.64);
   font-size: 0.82rem;
+  padding-top: 16px;
+  border-top: 1px solid rgba(250, 246, 239, 0.08);
 }
 
 /* ===== WhatsApp floating button ===== */
