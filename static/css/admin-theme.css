@@ -1,0 +1,83 @@
+/* ===== Jubilee Fashion Home — Admin Theme ===== */
+
+:root {
+  --admin-brown: #3b2418;
+  --admin-gold: #b8860b;
+  --admin-gold-light: #d4a537;
+  --admin-cream: #faf6ef;
+}
+
+/* Header */
+#header {
+  background: var(--admin-brown) !important;
+}
+
+#branding h1, #branding h1 a {
+  color: var(--admin-cream) !important;
+  font-family: 'Georgia', serif;
+}
+
+/* Module headers / sidebar */
+.module h2, .module caption, .inline-group h2 {
+  background: var(--admin-brown) !important;
+  color: var(--admin-cream) !important;
+}
+
+/* Links */
+a:link, a:visited {
+  color: var(--admin-gold) !important;
+}
+
+a:hover {
+  color: var(--admin-gold-light) !important;
+}
+
+/* Buttons */
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+  background: var(--admin-gold) !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  border: none !important;
+}
+
+.button:hover, input[type=submit]:hover, .submit-row input:hover {
+  background: var(--admin-gold-light) !important;
+}
+
+/* Default button (delete etc.) stays distinct */
+.button.default, input[type=submit].default {
+  background: var(--admin-brown) !important;
+}
+
+/* Selected/active row highlights */
+.selected {
+  background: #f0e8d8 !important;
+}
+
+/* Breadcrumbs */
+div.breadcrumbs {
+  background: var(--admin-brown) !important;
+  color: var(--admin-cream) !important;
+}
+
+div.breadcrumbs a {
+  color: var(--admin-gold-light) !important;
+}
+
+/* Object tools (Add button top right) */
+.object-tools a.addlink {
+  background: var(--admin-gold) !important;
+}
+
+/* Login page */
+.login #header {
+  background: var(--admin-brown) !important;
+}
+
+body.login {
+  background: var(--admin-cream) !important;
+}
+
+.login .submit-row input {
+  background: var(--admin-gold) !important;
+}
