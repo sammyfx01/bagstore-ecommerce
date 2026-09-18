@@ -775,6 +775,7 @@ button:disabled {
   align-items: center;
   gap: 12px;
   text-align: center;
+  min-height: 100%;
 }
 
 .footer-brand-logo {
@@ -787,6 +788,7 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 700;
