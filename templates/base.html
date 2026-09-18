@@ -14,8 +14,9 @@
 <body>
 
   <nav>
-    <a href="{% url 'home' %}" class="brand-link">Jubilee Fashion Home</a>
-
+        <a href="{% url 'home' %}" class="brand-link">
+      <img src="{% static 'images/logo.png' %}" alt="Jubilee Fashion Home" class="logo-img">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span>
       <span></span>
@@ -25,6 +26,7 @@
         <div class="nav-links" id="navLinks">
       <a href="{% url 'home' %}">Home</a>
       <a href="{% url 'product_list' %}">Shop</a>
+            <a href="{% url 'about' %}">About</a>
       <a href="{% url 'cart_detail' %}">Cart</a>
       {% if request.user.is_authenticated %}
                         <a href="{% url 'my_orders' %}">My Orders</a>
@@ -56,21 +58,25 @@
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="{% url 'home' %}">Jubilee Fashion Home</a>
+                <a href="{% url 'home' %}">
+          <img src="{% static 'images/logo.png' %}" alt="Jubilee Fashion Home" class="logo-img" style="height: 60px;">
+        </a>
         <p>Premium bags, crafted for every journey.</p>
       </div>
 
-      <div class="footer-section">
+            <div class="footer-section">
         <h3>Shop</h3>
         <a href="{% url 'product_list' %}">All Products</a>
         <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About Us</a>
       </div>
 
       <div class="footer-section">
         <h3>Connect</h3>
         <a href="https://wa.me/2347035047445" target="_blank" rel="noopener">WhatsApp Us</a>
-        <a href="https://instagram.com/jubileefashionbags" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://instagram.com/jubileefashionhome_1" target="_blank" rel="noopener">Instagram</a>
         <a href="https://tiktok.com/@jubileefashionbags" target="_blank" rel="noopener">TikTok</a>
+                <p style="margin-top: 10px; color: rgba(250,246,239,0.75); font-size: 0.9rem;">No 28 Baruwa Junction, opposite Iyana bus stop, Otta, Ogun State.</p> 
       </div>
     </div>
 

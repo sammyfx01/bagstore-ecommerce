@@ -1064,3 +1064,14 @@ button:disabled {
     margin-right: 0;
   }
 }
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 36px;
+  }
+}

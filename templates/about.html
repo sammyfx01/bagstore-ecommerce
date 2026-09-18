@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | Jubilee Fashion Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Jubilee Fashion Home is a fast-growing online and offline bag store offering premium designs at affordable prices.">
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>About Us</h1>
+</div>
+
+<div class="content-card">
+  <h2>Jubilee Fashion Home</h2>
+  <p>
+    Jubilee Fashion Home is a fast growing online and offline bag store. With a wide range of bags,
+    we make shopping for all your bag essential needs easy.
+  </p>
+  <p>
+    Hi, I'm <strong>Adebisi Kazeem-Olukoya</strong>, CEO of Jubilee Fashion Home.
+  </p>
+  <p>
+    With our wide range of bag collections, you are sure to find a bag that fits your style and
+    elevates your personality. We offer premium designs at affordable prices without compromising
+    on quality.
+  </p>
+</div>
+
+<div class="content-card">
+  <h2>Our Services</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px;">
+    <ul style="list-style: disc inside; color: var(--text-dark); line-height: 1.9;">
+      <li>Ladies fashion bag</li>
+      <li>Work bag</li>
+      <li>Men laptop/luggage bag</li>
+      <li>School bag</li>
+      <li>Lunch bag</li>
+      <li>Cooler bag</li>
+      <li>Waist bag</li>
+    </ul>
+    <ul style="list-style: disc inside; color: var(--text-dark); line-height: 1.9;">
+      <li>Sport bag</li>
+      <li>Duffel bag</li>
+      <li>Tote bag</li>
+      <li>Crossbody bag</li>
+      <li>Baby diaper bag</li>
+      <li>Gadgets bag</li>
+      <li>Travel boxes</li>
+    </ul>
+  </div>
+</div>
+
+<div class="content-card" style="text-align: center;">
+  <h2>Get In Touch</h2>
+  <p>📞 08084118392, 07035047445</p>
+  <p>📍 No 28 Baruwa Junction, opposite Iyana bus stop, Otta, Ogun State.</p>
+  <p>📷 <a href="https://instagram.com/jubileefashionhome_1" target="_blank" rel="noopener">@jubileefashionhome_1</a></p>
+  <a href="{% url 'product_list' %}" class="btn-gold" style="margin-top: 16px; display: inline-block;">Shop Our Collection</a>
+</div>
+{% endblock %}

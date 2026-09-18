@@ -59,3 +59,5 @@ def product_detail(request, slug):
         'review_form': review_form,
         'user_has_reviewed': user_has_reviewed,
     })
+def about(request):
+    return render(request, 'about.html')
