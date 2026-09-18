@@ -772,16 +772,26 @@ button:disabled {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 12px;
+  text-align: center;
 }
 
-.footer-brand a {
+.footer-brand-logo {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+}
+
+.footer-brand-name {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--cream);
+  letter-spacing: 0.02em;
 }
 
 .footer-brand .logo-img {
