@@ -991,7 +991,7 @@ button:disabled {
     padding: 0 12px;
   }
 
-  .  .cart-item {
+    .cart-item {
     display: flex;
     flex-direction: column;
     gap: 10px;
