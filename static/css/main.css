@@ -797,7 +797,7 @@ button:disabled {
 }
 
 .footer-brand .logo-img {
-  height: 56px;
+  height: 72px;
   width: auto;
   filter: drop-shadow(0 8px 14px rgba(0,0,0,0.18));
 }
@@ -1155,13 +1155,13 @@ button:disabled {
   }
 }
 .logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 640px) {
   .logo-img {
-    height: 36px;
+    height: 52px;
   }
 }
