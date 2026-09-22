@@ -372,6 +372,29 @@ nav {
   color: var(--gold-light);
 }
 
+.nav-badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -434,6 +457,10 @@ nav {
     width: 100%;
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
+  }
+
+  .nav-badge-link {
+    justify-content: space-between;
   }
 }
 /* ===== Page header ===== */
