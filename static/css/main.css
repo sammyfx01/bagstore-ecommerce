@@ -56,7 +56,7 @@ main {
   position: relative;
   min-height: 580px;
   overflow: hidden;
-  background: #111821;
+  background: var(--brown);
   margin: 0 calc(-50vw + 50%) 64px;
   width: 100vw;
   display: flex;
@@ -71,7 +71,7 @@ main {
   left: 42%;
   width: 1px;
   height: 140%;
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(212, 165, 55, 0.3);
   transform: rotate(18deg);
 }
 
@@ -82,7 +82,7 @@ main {
   bottom: 0;
   width: 44%;
   height: 100%;
-  background: linear-gradient(145deg, #632c3b 0%, #381d29 100%);
+  background: linear-gradient(145deg, var(--brown-light) 0%, #2b1b14 100%);
   clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -99,7 +99,7 @@ main {
   font-size: 0.68rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #82a5ff;
+  color: var(--gold-light);
   margin-bottom: 24px;
 }
 
@@ -113,7 +113,7 @@ main {
 }
 
 .hero-content h1 em {
-  color: #d67b85;
+  color: var(--gold-light);
   font-weight: 500;
 }
 
@@ -145,8 +145,8 @@ main {
   width: min(31vw, 360px);
   height: min(72%, 420px);
   overflow: hidden;
-  background: #e7ddd0;
-  box-shadow: 18px 22px 0 rgba(17, 24, 33, 0.32);
+  background: var(--cream-dark);
+  box-shadow: 18px 22px 0 rgba(31, 18, 13, 0.35);
   transform: translateY(-50%) rotate(3deg);
 }
 
@@ -162,7 +162,7 @@ main {
   right: 18px;
   bottom: 18px;
   padding: 7px 10px;
-  background: rgba(17, 24, 33, 0.88);
+  background: rgba(59, 36, 24, 0.92);
   color: #fff;
   font-size: 0.57rem;
   letter-spacing: 0.15em;
@@ -173,8 +173,8 @@ main {
 /* Keep the call to action crisp against the ink hero. */
 .btn-gold {
   display: inline-block;
-  background-color: #d67b85;
-  color: #111821;
+  background-color: var(--gold);
+  color: #fff;
   padding: 15px 25px;
   font-weight: 700;
   font-size: 0.8rem;
@@ -184,8 +184,8 @@ main {
 }
 
 .btn-gold:hover {
-  background-color: #f2a0a5;
-  color: #111821;
+  background-color: var(--gold-light);
+  color: #fff;
 }
 
 /* ===== Category & Product sections ===== */
@@ -304,13 +304,13 @@ main {
 /* ===== Navbar ===== */
 nav {
   min-height: 92px;
-  background: #111821;
+  background: var(--brown);
   padding: 14px max(4vw, 32px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border-bottom: 1px solid rgba(130, 165, 255, 0.28);
+  border-bottom: 1px solid rgba(212, 165, 55, 0.28);
 }
 
 .nav-brand-group {
@@ -349,7 +349,7 @@ nav {
 
 .brand-copy small {
   margin-top: 5px;
-  color: #82a5ff;
+  color: var(--gold-light);
   font-size: 0.57rem;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -379,7 +379,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #d67b85;
+  color: var(--gold-light);
 }
 
 .nav-badge-link {
@@ -453,7 +453,7 @@ nav {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #111821;
+    background-color: var(--brown);
     padding: 12px 20px 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     z-index: 15;
@@ -466,7 +466,7 @@ nav {
   .nav-links a {
     width: 100%;
     padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(250, 246, 239, 0.12);
   }
 
   .nav-badge-link {
