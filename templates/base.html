@@ -14,9 +14,16 @@
 <body>
 
   <nav>
-        <a href="{% url 'home' %}" class="brand-link">
-      <img src="{% static 'images/logo.svg' %}" alt="Jubilee Fashion Home" class="logo-img">
-    </a>
+    <div class="nav-brand-group">
+      <a href="{% url 'home' %}" class="brand-link">
+        <img src="{% static 'images/logo.svg' %}" alt="Jubilee Fashion Home" class="logo-img">
+        <span class="brand-copy">
+          <strong>Jubilee</strong>
+          <small>Fashion Home</small>
+        </span>
+      </a>
+      <span class="nav-tagline">Curated bags for every journey</span>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span>
       <span></span>
