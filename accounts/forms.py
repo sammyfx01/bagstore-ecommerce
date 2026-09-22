@@ -13,6 +13,15 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].help_text = ''
+        self.fields['password1'].help_text = ''
+        self.fields['password2'].help_text = ''
+
+    def _post_clean(self):
+        forms.ModelForm._post_clean(self)
+
     def save(self, commit=True):
         user = super().save(commit=False)
         user.email = self.cleaned_data['email']
