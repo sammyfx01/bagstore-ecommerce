@@ -17,4 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  document.querySelectorAll('[data-password-toggle]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const password = document.getElementById(button.dataset.passwordToggle);
+      const isVisible = password.type === 'text';
+
+      password.type = isVisible ? 'password' : 'text';
+      button.classList.toggle('is-visible', !isVisible);
+      button.setAttribute('aria-label', isVisible ? 'Show password' : 'Hide password');
+      button.setAttribute('title', isVisible ? 'Show password' : 'Hide password');
+    });
+  });
 });

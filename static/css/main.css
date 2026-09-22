@@ -472,6 +472,58 @@ nav {
   box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.12);
 }
 
+.password-input-wrap {
+  position: relative;
+}
+
+.password-input-wrap input {
+  padding-right: 46px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.password-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.password-eye {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 13px;
+  border: 1.5px solid currentColor;
+  border-radius: 75% 15%;
+  transform: rotate(45deg);
+}
+
+.password-eye::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.password-toggle.is-visible .password-eye {
+  opacity: 0.55;
+}
+
 .field-error,
 .form-errors {
   margin-top: 6px;
