@@ -14,17 +14,25 @@
 
 <section class="hero">
   <div class="hero-content">
-    <span class="hero-eyebrow">The Jubilee edit / 2026</span>
-    <h1>Carry your<br><em>signature.</em></h1>
-    <p>Distinctive bags for workdays, weekends, and every destination in between.</p>
+    <span class="hero-eyebrow">New season / 2026 collection</span>
+    <h1>Style that<br><em>travels.</em></h1>
+    <p>Statement bags with the polish to go from first meeting to final destination.</p>
     <div class="hero-actions">
-      <a href="{% url 'product_list' %}" class="btn-gold">Explore the collection <span aria-hidden="true">&#8594;</span></a>
-      <span class="hero-note">Made to move with you</span>
+      <a href="{% url 'product_list' %}" class="btn-gold">Shop the edit <span aria-hidden="true">&#8594;</span></a>
+      <span class="hero-note">Designed for the way you move</span>
     </div>
   </div>
-  <div class="hero-mark" aria-hidden="true">
-    <span>JFH</span>
-    <small>Jubilee<br>Fashion Home</small>
+  <div class="hero-media">
+    {% if featured_products %}
+      {% with hero_product=featured_products.0 %}
+        {% with hero_image=hero_product.images.first %}
+          {% if hero_image %}
+            <img src="{{ hero_image.image.url }}" alt="{{ hero_image.alt_text|default:hero_product.name }}">
+          {% endif %}
+        {% endwith %}
+      {% endwith %}
+    {% endif %}
+    <span class="hero-media-label">Jubilee<br>signature</span>
   </div>
 </section>
 
